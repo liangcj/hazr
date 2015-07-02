@@ -22,7 +22,7 @@ Using the Mayo PBC data from the `survival` package, estimate the hazard rate at
     library(survival)
     library(hazr)
     
-    # Slightly edit pbc data to prepare for feeding into coha(), save as `exdat`
+    # Slightly edit pbc data to prepare for feeding into hazr::hazr(), save as `exdat`
     exdat <- pbc %>%
       slice(1:312) %>%
       select(time, status, age) %>%
@@ -42,7 +42,7 @@ What if we want to estimate the entire hazard curve for 50 year olds?
     library(hazr)
     library(foreach)
     
-    # Slightly edit pbc data to prepare for feeding into coha(), save as `exdat`
+    # Slightly edit pbc data to prepare for feeding into hazr::hazr(), save as `exdat`
     exdat <- pbc %>%
       slice(1:312) %>%
       select(time, status, age) %>%
