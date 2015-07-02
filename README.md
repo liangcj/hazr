@@ -1,4 +1,6 @@
 # Nonparametric hazard regression
+**To install**, make sure you have the `devtools` library, then run: `devtools::install_github("liangcj/hazr")`
+
 This is a barebones R package for nonparametric **haz**ard **r**egression (`hazr`). It is written entirely in C++, and given an `R` interface using the [`Rcpp`](https://github.com/RcppCore/Rcpp) package. I also couldn't resist the opportunity to create an official logo for this package. If you end up using `hazr`, please feel free to liberally plaster the logo throughout your documentation:
 
 ![hazrlogo](/pictures/hazrlogo.png)
