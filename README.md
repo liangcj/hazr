@@ -3,7 +3,7 @@ This is a barebones R package for nonparametric **haz**ard **r**egression (`hazr
 
 ![hazrlogo](/pictures/hazrlogo.png)
 
-The main function in this package, `hazr::hazr`, provides a nonparametric conditional hazard estimate at a single time and univariate marker value. I created this package because another package I am developing requires estimates of the conditional hazard surface at many points, and I found existing solutions inadequate.
+The main function in this package, `hazr::hazr`, provides a nonparametric conditional hazard estimate at a single time and univariate marker value. I created this package because another package I am developing requires estimates of the conditional hazard surface at many points, and I found existing solutions inadequate (the `muhaz` package should be more than enough for most other applications though - more on that later).
 
 The details for the conditional hazard estimator are in [McKeague and Utikal (1990)](http://projecteuclid.org/euclid.aos/1176347745), but here is a quick graphical depiction of how the estimator works:
 
