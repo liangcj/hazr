@@ -1,13 +1,13 @@
 # Nonparametric hazard regression
 **To install**, make sure you have the `devtools` library, then run: `devtools::install_github("liangcj/hazr")`
 
-This is a barebones R package for nonparametric **haz**ard **r**egression (`hazr`). It is written entirely in C++, and given an `R` interface using the [`Rcpp`](https://github.com/RcppCore/Rcpp) package. I also couldn't resist the opportunity to create an official logo for this package. If you end up using `hazr`, please feel free to liberally plaster the logo throughout your documentation:
+This is a barebones R package for nonparametric **haz**ard **r**egression (`hazr`). It is written entirely in C++, and given an `R` interface using the [`Rcpp`](https://github.com/RcppCore/Rcpp) package. I also couldn't resist the opportunity to create an official logo for this package. If you end up using `hazr`, please feel free to liberally plaster the logo throughout your documentation (also shoutout to @rcatladies #rcatladies):
 
 ![hazrlogo](/pictures/hazrlogo.png)
 
 The main function in this package, `hazr::hazr`, provides a nonparametric conditional hazard estimate at a single time and univariate marker value. I created this package because another package I am developing requires estimates of the conditional hazard surface at many points, and I found existing solutions inadequate (the `muhaz` package should be more than enough for most other applications though - more on that later).
 
-The details for the conditional hazard estimator are in [McKeague and Utikal (1990)](http://projecteuclid.org/euclid.aos/1176347745), but here is a quick graphical depiction of how the estimator works:
+The details for the conditional hazard estimator are in [McKeague and Utikal (1990)](http://projecteuclid.org/euclid.aos/1176347745), but it basically involves calculating a conditional Nelson-Aalen estimator and kernel smoothing the result. Here is a quick graphical depiction of how the estimator works:
 
 ![coha](/pictures/coha.png)
 
