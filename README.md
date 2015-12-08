@@ -1,9 +1,7 @@
 # Nonparametric hazard regression
 **To install**, make sure you have the `devtools` library, then run: `devtools::install_github("liangcj/hazr")`
 
-This is a barebones R package for nonparametric **haz**ard **r**egression (`hazr`). It is written entirely in C++, and given an `R` interface using the [`Rcpp`](https://github.com/RcppCore/Rcpp) package. I also couldn't resist the opportunity to create an official logo for this package. If you end up using `hazr`, please feel free to liberally plaster the logo throughout your documentation (also shoutout to @rcatladies #rcatladies):
-
-![hazrlogo](/pictures/hazrlogo.png)
+This is a barebones R package for nonparametric **haz**ard **r**egression (`hazr`). It is written entirely in C++, and given an `R` interface using the [`Rcpp`](https://github.com/RcppCore/Rcpp) package.
 
 The main function in this package, `hazr::hazr`, provides a nonparametric conditional hazard estimate at a single time and univariate marker value. I created this package because another package I am developing requires estimates of the conditional hazard surface at many points, and I found existing solutions inadequate (the `muhaz` package should be more than enough for most other applications though - more on that later).
 
